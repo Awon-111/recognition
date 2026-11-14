@@ -1,0 +1,9 @@
+[
+  {"id":"commissioning","name":"调试 · 满面渣层","description":"近满面的初始渣层叠加浓淡变化。先倾罐，再沿液面把渣牵引至出渣口。","split":"development","seed":1734,"layout":"scattered","clusters":9,"radius_m":0.27,"drift_factor":1,"steam":0.06},
+  {"id":"scattered","name":"分散小块","description":"满面渣膜上分布多个高浓度小区域，检验贴面带道的覆盖。","split":"evaluation","seed":50101,"layout":"scattered","clusters":13,"radius_m":0.19,"drift_factor":0.8,"steam":0.03},
+  {"id":"clustered","name":"集中大块","description":"基础渣层上有相邻的高浓度渣团，检验连续贴面与补扫。","split":"evaluation","seed":50102,"layout":"clustered","clusters":6,"radius_m":0.36,"drift_factor":0.8,"steam":0.03},
+  {"id":"drifting","name":"持续漂移","description":"残渣持续沿椭圆流场漂移，检验帧间跟踪与运动预测。","split":"evaluation","seed":50103,"layout":"band","clusters":9,"radius_m":0.24,"drift_factor":3.4,"steam":0.05},
+  {"id":"tilting","name":"倾角改变","description":"完成两轮贴面出渣后按倾翻轴速度调角，再根据新的水平液面和出渣边重规划。","split":"evaluation","seed":50104,"layout":"band","clusters":8,"radius_m":0.27,"drift_factor":1.1,"steam":0.04,"tilt_after":2},
+  {"id":"displaced","name":"扫后大幅移位","description":"第一段动作完成后施加确定性的全场剪切扰动，检查后续路径变化。","split":"evaluation","seed":50105,"layout":"scattered","clusters":10,"radius_m":0.24,"drift_factor":1.3,"steam":0.04,"shift_after":1},
+  {"id":"steam","name":"蒸汽遮挡","description":"作业开始后一段时间出现严重蒸汽，检验保持、恢复及计时。","split":"evaluation","seed":50106,"layout":"clustered","clusters":9,"radius_m":0.32,"drift_factor":1.4,"steam":0.53,"steam_window_s":[5,32]}
+]

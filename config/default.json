@@ -1,0 +1,41 @@
+{
+  "name": "360 吨级参考设备",
+  "equipment_class": "360t",
+  "tank": {
+    "source": "仿真假设", "length_m": 5.25, "width_m": 4.5, "height_m": 3.75,
+    "trunnion_span_m": 3.9, "pivot_m": [0, 0, 2.48],
+    "inner_radii_m": [2.23, 1.82], "rim_radii_m": [2.43, 2.04],
+    "bottom_scale": 0.63, "rim_z_m": 1.45, "liquid_z_m": 0.84,
+    "outlet_x_m": 0, "outlet_width_m": 1.68, "outlet_extension_m": 0.31, "outlet_drop_m": 0.18
+  },
+  "arm": {
+    "source": "仿真假设", "base_m": [0, -4.05, 0.55], "boom_z_m": 5.55,
+    "tool_size_m": [1.16, 0.27, 0.18], "collision_margin_m": 0.035, "skim_depth_m": 0.014,
+    "extension": {"min": 0.5, "max": 6.0, "speed": 1.48, "initial": 0.72},
+    "lift": {"min": 1.8, "max": 4.82, "speed": 1.18, "initial": 4.06},
+    "swing": {"min": -49, "max": 49, "speed": 32, "initial": 0},
+    "pitch": {"min": -28, "max": 28, "speed": 30, "initial": 0},
+    "safety_boxes": [{"name": "左侧防护座", "min_m": [-3.2, -0.9, 0], "max_m": [-2.75, 0.75, 3.05]}]
+  },
+  "tilt": {
+    "source": "仿真假设", "initial_deg": 0, "min_deg": 0, "max_deg": 16, "working_deg": 10,
+    "speed_deg_s": 3, "step_deg": 1.25, "allow_planner": true
+  },
+  "camera": {
+    "source": "仿真假设", "resolution": [640, 480], "fps": 20,
+    "position_m": [0, -1.05, 10.4], "look_at_m": [0, -0.05, 3.5],
+    "intrinsics": [710, 710, 320, 235], "distortion": [0, 0, 0, 0, 0],
+    "device_to_camera": null, "video_plane": null, "max_frame_age_s": 0.9,
+    "steam_limit": 0.29, "min_confidence": 0.54, "feedback_s": 0.12, "noise": 2.7
+  },
+  "slag": {
+    "source": "仿真假设", "distribution": "工况定义", "grid_step_m": 0.035, "area_scale": 1,
+    "drift_m_s": 0.018, "aggregation": 0.34, "disturbance_shift_m": 0.07, "contact_efficiency": 0.91,
+    "initial_film": 0.56, "coverage_threshold": 0.075, "skim_fraction": 0.58
+  },
+  "objectives": {
+    "source": "仿真假设", "removal_target": 0.98, "time_limit_s": 120, "iron_limit": 8,
+    "weights": {"removal": 4, "iron": 0.26, "disturbance": 0.55, "time": 0.036, "future": 0.42},
+    "recognition_budget_s": 0.095, "planning_budget_s": 0.22, "hold_retry_s": 0.65
+  }
+}

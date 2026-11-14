@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="360 吨级铁水罐扒渣路径规划与三维闭环仿真操作台">
+  <link rel="icon" href="/static/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/style.css">
+  <title>熔线 · 扒渣路径规划平台</title>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#live" aria-label="熔线，实时作业">
+        <img src="/static/logo.svg" width="42" height="42" alt="">
+        <div><strong>熔线</strong><small>SLAG MOTION LAB</small></div>
+      </a>
+      <div class="nav-label">作业中心</div>
+      <nav id="nav" aria-label="操作台导航"></nav>
+      <div class="side-bottom">
+        <div class="asset-badge">
+          <span class="asset-icon">360<span>t</span></span>
+          <span><strong>参考设备</strong><small>参数化仿真</small></span>
+        </div>
+        <div class="side-foot"><i></i> 本地运行 <span>V1.2</span></div>
+      </div>
+    </aside>
+    <div class="workbench">
+      <header class="topbar">
+        <div class="breadcrumb"><button id="menu" class="icon-btn mobile-menu" aria-label="展开导航">☰</button><span>工作台</span><b>/</b><strong id="crumb">实时作业</strong></div>
+        <div class="top-status"><span class="pill teal"><i></i>仿真平台</span><span class="pill ghost field">现场待验证</span><button class="icon-btn help" data-action="help" aria-label="使用说明">?</button></div>
+      </header>
+      <main id="page" class="page" aria-live="off"><div class="loading"><span class="spinner"></span> 正在连接本地仿真服务</div></main>
+    </div>
+  </div>
+  <dialog id="dialog"></dialog>
+  <div class="toast-stack" id="toasts" role="status" aria-live="polite"></div>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
